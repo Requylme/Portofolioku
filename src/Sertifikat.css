@@ -1,0 +1,91 @@
+.sertifikat-section {
+  scroll-margin-top: 100px;
+}
+
+.sertifikat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.sertifikat-card {
+  overflow: hidden;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 16px;
+  background: var(--card-bg, #ffffff);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sertifikat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.sertifikat-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.sertifikat-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sertifikat-content {
+  padding: 20px;
+}
+
+.sertifikat-content h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.sertifikat-content p {
+  margin: 0 0 10px;
+  color: var(--text-secondary, #64748b);
+  font-size: 14px;
+}
+
+.sertifikat-tahun {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--text-secondary, #64748b);
+  font-size: 13px;
+}
+
+.sertifikat-button {
+  display: block;
+  padding: 11px 14px;
+  border: 1px solid #2563eb;
+  border-radius: 9px;
+  color: #2563eb;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.sertifikat-button:hover {
+  color: #ffffff;
+  background: #2563eb;
+}
+
+@media (max-width: 900px) {
+  .sertifikat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .sertifikat-grid {
+    grid-template-columns: 1fr;
+  }
+}
